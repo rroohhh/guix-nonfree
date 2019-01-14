@@ -6,6 +6,7 @@
 ;;; Copyright © 2015 Federico Beffa <beffa@fbengineering.ch>
 ;;; Copyright © 2015 Taylan Ulrich Bayırlı/Kammer <taylanbayirli@gmail.com>
 ;;; Copyright © 2015, 2017 Andy Wingo <wingo@igalia.com>
+;;; Copyright © 2019 Marius Bakke <mbakke@fastmail.com>
 ;;;
 ;;; This program is free software; you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -54,18 +55,24 @@
 
 ;;; Forgive me Stallman for I have sinned.
 
+(define linux-firmware-version "65b1c68c63f974d72610db38dfae49861117cae2")
+(define (linux-firmware-source version)
+  (origin
+    (method git-fetch)
+    (uri (git-reference
+          (url (string-append "https://git.kernel.org/pub/scm/linux/kernel"
+                              "/git/firmware/linux-firmware.git"))
+          (commit version)))
+    (file-name (git-file-name "linux-firmware" (string-take version 8)))
+    (sha256
+     (base32
+      "1anr7fblxfcrfrrgq98kzy64yrwygc2wdgi47skdmjxhi3wbrvxz"))))
+
 (define-public radeon-firmware-non-free
   (package
     (name "radeon-firmware-non-free")
-    (version "65b1c68c63f974d72610db38dfae49861117cae2")
-    (source (origin
-              (method git-fetch)
-              (uri (git-reference
-                    (url "git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git")
-                    (commit version)))
-              (sha256
-               (base32
-                "1anr7fblxfcrfrrgq98kzy64yrwygc2wdgi47skdmjxhi3wbrvxz"))))
+    (version linux-firmware-version)
+    (source (linux-firmware-source version))
     (build-system trivial-build-system)
     (arguments
      `(#:modules ((guix build utils))
@@ -92,15 +99,8 @@
 (define-public ath10k-firmware-non-free
   (package
     (name "ath10k-firmware-non-free")
-    (version "65b1c68c63f974d72610db38dfae49861117cae2")
-    (source (origin
-              (method git-fetch)
-              (uri (git-reference
-                    (url "git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git")
-                    (commit version)))
-              (sha256
-               (base32
-                "1anr7fblxfcrfrrgq98kzy64yrwygc2wdgi47skdmjxhi3wbrvxz"))))
+    (version linux-firmware-version)
+    (source (linux-firmware-source version))
     (build-system trivial-build-system)
     (arguments
      `(#:modules ((guix build utils))
@@ -122,15 +122,8 @@
 (define-public linux-firmware-non-free
   (package
     (name "linux-firmware-non-free")
-    (version "65b1c68c63f974d72610db38dfae49861117cae2")
-    (source (origin
-              (method git-fetch)
-              (uri (git-reference
-                    (url "git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git")
-                    (commit version)))
-              (sha256
-               (base32
-                "1anr7fblxfcrfrrgq98kzy64yrwygc2wdgi47skdmjxhi3wbrvxz"))))
+    (version linux-firmware-version)
+    (source (linux-firmware-source version))
     (build-system trivial-build-system)
     (arguments
      `(#:modules ((guix build utils))
@@ -159,15 +152,8 @@
 (define-public iwlwifi-firmware-nonfree
   (package
     (name "iwlwifi-firmware-nonfree")
-    (version "65b1c68c63f974d72610db38dfae49861117cae2")
-    (source (origin
-              (method git-fetch)
-              (uri (git-reference
-                    (url "git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git")
-                    (commit version)))
-              (sha256
-               (base32
-                "1anr7fblxfcrfrrgq98kzy64yrwygc2wdgi47skdmjxhi3wbrvxz"))))
+    (version linux-firmware-version)
+    (source (linux-firmware-source version))
     (build-system trivial-build-system)
     (arguments
      `(#:modules ((guix build utils))
@@ -192,15 +178,8 @@
 (define-public ibt-hw-firmware-nonfree
   (package
     (name "ibt-hw-firmware-nonfree")
-    (version "65b1c68c63f974d72610db38dfae49861117cae2")
-    (source (origin
-              (method git-fetch)
-              (uri (git-reference
-                    (url "git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git")
-                    (commit version)))
-              (sha256
-               (base32
-                "1anr7fblxfcrfrrgq98kzy64yrwygc2wdgi47skdmjxhi3wbrvxz"))))
+    (version linux-firmware-version)
+    (source (linux-firmware-source version))
     (build-system trivial-build-system)
     (arguments
      `(#:modules ((guix build utils))
