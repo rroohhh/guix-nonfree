@@ -22,7 +22,7 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with GNU Guix.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (gnu packages linux-nonfree)
+(define-module (nonfree linux)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages tls)
