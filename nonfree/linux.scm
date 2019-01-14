@@ -89,7 +89,6 @@
                                            (lambda (file stat)
                                              (string-contains file "radeon"))))
                      #t))))
-
     (home-page "")
     (synopsis "Non-free firmware for Radeon integrated chips")
     (description "Non-free firmware for Radeon integrated chips")
@@ -112,7 +111,6 @@
                      (copy-recursively (string-append source "/ath10k")
                                        (string-append fw-dir "/ath10k"))
                      #t))))
-
     (home-page "")
     (synopsis "Non-free firmware for ath10k wireless chips")
     (description "Non-free firmware for ath10k integrated chips")
@@ -134,7 +132,6 @@
                      (mkdir-p fw-dir)
                      (copy-recursively source fw-dir)
                      #t))))
-
     (home-page "")
     (synopsis "Non-free firmware for Linux")
     (description "Non-free firmware for Linux")
@@ -168,7 +165,6 @@
                                                            (basename file))))
                                (find-files source "iwlwifi-.*\\.ucode$|LICENCE\\.iwlwifi_firmware$"))
                      #t))))
-
     (home-page "https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi")
     (synopsis "Non-free firmware for Intel wifi chips")
     (description "Non-free firmware for Intel wifi chips")
@@ -194,7 +190,6 @@
                                                            (basename file))))
                                (find-files source "ibt-hw-.*\\.bseq$|LICENCE\\.ibt_firmware$"))
                      #t))))
-
     (home-page "https://www.intel.com/support/wireless/wlan/sb/CS-016675.htm")
     (synopsis "Non-free firmware for Intel bluetooth chips")
     (description "Non-free firmware for Intel bluetooth chips")
