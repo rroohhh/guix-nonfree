@@ -68,9 +68,9 @@
      (base32
       "1rgh5zbwpsh7c1kksisgi4m6d5fva6yhi0cnz3wd48mgdd9gqr25"))))
 
-(define-public radeon-firmware-non-free
+(define-public radeon-firmware-nonfree
   (package
-    (name "radeon-firmware-non-free")
+    (name "radeon-firmware-nonfree")
     (version linux-firmware-version)
     (source (linux-firmware-source version))
     (build-system trivial-build-system)
@@ -96,9 +96,9 @@
     ;; FIXME: What license?
     (license (license:non-copyleft "http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
 
-(define-public ath10k-firmware-non-free
+(define-public ath10k-firmware-nonfree
   (package
-    (name "ath10k-firmware-non-free")
+    (name "ath10k-firmware-nonfree")
     (version linux-firmware-version)
     (source (linux-firmware-source version))
     (build-system trivial-build-system)
@@ -119,9 +119,9 @@
     ;; FIXME: What license?
     (license (license:non-copyleft "http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
 
-(define-public linux-firmware-non-free
+(define-public linux-firmware-nonfree
   (package
-    (name "linux-firmware-non-free")
+    (name "linux-firmware-nonfree")
     (version linux-firmware-version)
     (source (linux-firmware-source version))
     (build-system trivial-build-system)
