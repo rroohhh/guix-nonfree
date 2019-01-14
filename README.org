@@ -1,0 +1,27 @@
+#+TITLE: guix-nonfree
+#+OPTIONS: toc:nil num:nil
+
+/Forgive me Stallman for I have sinned.../
+
+This repository contains non-free package modules for use with GNU Guix.
+
+* How to use
+
+Create or modify the =~/.config/guix/channels.scm= file so it looks
+something like this:
+
+:  (cons (channel
+:         (name 'nonfree)
+:         (url "https://gitlab.com/mbakke/guix-nonfree.git")
+:         (branch "master"))
+:        %default-channels)
+
+Then invoke =guix pull= to make the new packages available.
+
+* Disclaimer
+
+*Do not* use any packages from this repository unless you have read and
+understood their respective licenses, and know exactly what you are
+doing.  *Do* contemplate the life choices that lead you to this point.
+
+This project is not affiliated with GNU or Guix in any way.

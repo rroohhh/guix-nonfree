@@ -53,8 +53,6 @@
       (license license:gpl2)
       (home-page "https://kernel.org/"))))
 
-;;; Forgive me Stallman for I have sinned.
-
 (define linux-firmware-version "bc656509a3cfb60fcdfc905d7e23c18873e4e7b9")
 (define (linux-firmware-source version)
   (origin
