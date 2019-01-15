@@ -22,7 +22,7 @@
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 (define-module (nonfree packages linux)
-  #:use-module ((nonfree licenses) #:prefix license:)
+  #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages tls)
   #:use-module (guix build-system trivial)
@@ -90,7 +90,8 @@
     (home-page "")
     (synopsis "Non-free firmware for Radeon integrated chips")
     (description "Non-free firmware for Radeon integrated chips")
-    (license (license:proprietary "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
+    ;; FIXME: What license?
+    (license (license:non-copyleft "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
 
 (define-public ath10k-firmware-nonfree
   (package
@@ -111,7 +112,8 @@
     (home-page "")
     (synopsis "Non-free firmware for ath10k wireless chips")
     (description "Non-free firmware for ath10k integrated chips")
-    (license (license:proprietary "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
+    ;; FIXME: What license?
+    (license (license:non-copyleft "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
 
 (define-public linux-firmware-nonfree
   (package
@@ -131,7 +133,8 @@
     (home-page "")
     (synopsis "Non-free firmware for Linux")
     (description "Non-free firmware for Linux")
-    (license (license:proprietary "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
+    ;; FIXME: What license?
+    (license (license:non-copyleft "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.radeon_firmware;hb=HEAD"))))
 
 (define-public perf-nonfree
   (package
@@ -163,7 +166,8 @@
     (home-page "https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi")
     (synopsis "Non-free firmware for Intel wifi chips")
     (description "Non-free firmware for Intel wifi chips")
-    (license (license:proprietary "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.iwlwifi_firmware;hb=HEAD"))))
+    ;; FIXME: What license?
+    (license (license:non-copyleft "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.iwlwifi_firmware;hb=HEAD"))))
 
 (define-public ibt-hw-firmware-nonfree
   (package
@@ -187,4 +191,5 @@
     (home-page "https://www.intel.com/support/wireless/wlan/sb/CS-016675.htm")
     (synopsis "Non-free firmware for Intel bluetooth chips")
     (description "Non-free firmware for Intel bluetooth chips")
-    (license (license:proprietary "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.ibt_firmware;hb=HEAD"))))
+    ;; FIXME: What license?
+    (license (license:non-copyleft "https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=blob_plain;f=LICENCE.ibt_firmware;hb=HEAD"))))
