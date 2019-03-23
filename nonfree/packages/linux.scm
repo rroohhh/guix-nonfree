@@ -22,6 +22,7 @@
 ;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 (define-module (nonfree packages linux)
+  #:use-module (guix utils)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages tls)
@@ -33,11 +34,12 @@
 (define (linux-nonfree-urls version)
   "Return a list of URLs for Linux-Nonfree VERSION."
   (list (string-append
-         "https://www.kernel.org/pub/linux/kernel/v4.x/"
+         "https://www.kernel.org/pub/linux/kernel/"
+         "v" (version-prefix version 1) ".x/"
          "linux-" version ".tar.xz")))
 
 (define-public linux-nonfree
-  (let* ((version "4.20.13"))
+  (let* ((version "5.0.3"))
     (package
       (inherit linux-libre)
       (name "linux-nonfree")
@@ -47,7 +49,7 @@
                 (uri (linux-nonfree-urls version))
                 (sha256
                  (base32
-                  "1h8axf8wg3g87kjaan2241zq83n5p5769anmc3i8mrm4y2saswqf"))))
+                  "12gzpz53kgznk5xg2cgbhfrgxflbx5zsnbpwki8zsjvq59wk7ma0"))))
       (synopsis "Mainline Linux kernel, nonfree binary blobs included.")
       (description "Linux is a kernel.")
       (license license:gpl2)
