@@ -39,7 +39,7 @@
          "linux-" version ".tar.xz")))
 
 (define-public linux-nonfree
-  (let* ((version "5.0.8"))
+  (let* ((version "5.0.9"))
     (package
       (inherit linux-libre)
       (name "linux-nonfree")
@@ -49,7 +49,7 @@
                 (uri (linux-nonfree-urls version))
                 (sha256
                  (base32
-                  "0dalr3vym2ixmblnlrw10dfx0icdf2aab38z2j9y1qfcx128140i"))))
+                  "0n5s0nwk786qyzwkjs5sv0ldhi8wry6xrsy9vldxp17qbcvv2j07"))))
       (synopsis "Mainline Linux kernel, nonfree binary blobs included.")
       (description "Linux is a kernel.")
       (license license:gpl2)
