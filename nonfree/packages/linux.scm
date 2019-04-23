@@ -55,7 +55,7 @@
       (license license:gpl2)
       (home-page "https://kernel.org/"))))
 
-(define linux-firmware-version "bc656509a3cfb60fcdfc905d7e23c18873e4e7b9")
+(define linux-firmware-version "20190416")
 (define (linux-firmware-source version)
   (origin
     (method git-fetch)
@@ -66,7 +66,7 @@
     (file-name (git-file-name "linux-firmware" (string-take version 8)))
     (sha256
      (base32
-      "1rgh5zbwpsh7c1kksisgi4m6d5fva6yhi0cnz3wd48mgdd9gqr25"))))
+      "1grsxch5x65piqm8zswa7za3zccwxk0sxdm5qpgidmmq729xq3py"))))
 
 (define-public radeon-firmware-nonfree
   (package
