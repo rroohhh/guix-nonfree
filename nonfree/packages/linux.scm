@@ -39,9 +39,9 @@
          "linux-" version ".tar.xz")))
 
 (define-public linux-nonfree
-  (let* ((version "5.2.7"))
+  (let* ((version "5.3.7"))
     (package
-      (inherit linux-libre-5.2)
+      (inherit linux-libre-5.3)
       (name "linux-nonfree")
       (version version)
       (source (origin

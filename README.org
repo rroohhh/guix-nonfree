@@ -1,8 +1,6 @@
 #+TITLE: guix-nonfree
 #+OPTIONS: toc:nil num:nil
 
-/Forgive me Stallman for I have sinned.../
-
 This repository contains non-free package modules for use with GNU Guix.
 
 * How to use
@@ -12,7 +10,7 @@ something like this:
 
 :  (cons (channel
 :         (name 'nonfree)
-:         (url "https://gitlab.com/mbakke/guix-nonfree.git")
+:         (url "https://github.com/rroohhh/guix-nonfree.git")
 :         (branch "master"))
 :        %default-channels)
 
