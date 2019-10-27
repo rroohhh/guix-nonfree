@@ -49,7 +49,7 @@
                 (uri (linux-nonfree-urls version))
                 (sha256
                  (base32
-                  "1aazhf0v8bv4py0wnqkdmiy80fchnix431l0hda2fkwsdf9njgnv"))))
+                  "00j8sdrmmppqf38vl50a4zas5gy7yv37n43b61f8472k45773jf6"))))
       (synopsis "Mainline Linux kernel, nonfree binary blobs included.")
       (description "Linux is a kernel.")
       (license license:gpl2)
